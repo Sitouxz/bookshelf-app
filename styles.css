@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --var-primary: #5198ff;
+  --var-primary-2: #2a6fd3;
+  --var-danger: #ff5151;
+  --var-danger-2: #be3333;
+  --var-monochrome-0: #1e1e1e;
+  --var-monochrome-1: #e8e8e8;
+  --var-monochrome-2: #dadada;
+  --var-monochrome-3: #b1b1b1;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--var-monochrome-1);
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+footer {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+footer .footerContainer {
+  background-color: white;
+  color: var(--var-monochrome-3);
+  text-align: center;
+  padding: 1rem;
+}
+
+header {
+  background-color: white;
+  padding: 12px 30vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header span {
+  color: var(--var-primary);
+}
+
+header .social-media {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 24px;
+}
+
+.social-media a {
+  color: var(--var-primary);
+}
+
+main {
+  padding: 60px 30vh;
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+nav button {
+  background-color: var(--var-primary);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+nav button:hover {
+  background-color: var(--var-primary-2);
+}
+
+.search {
+  display: flex;
+}
+
+.searchInput {
+  border: none;
+  padding: 9px;
+  width: 250px;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  background-color: var(--var-monochrome-2);
+  color: var(--var-monochrome-3);
+  transition: all 0.2s ease-in-out;
+}
+
+.searchInput:focus {
+  color: var(--var-primary);
+  transition: all 0.2s ease-in-out;
+}
+
+.searchButton {
+  margin-left: -8px;
+  background: var(--var-primary);
+  padding: 9px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.searchButton:hover {
+  background: var(--var-primary-2);
+}
+
+.bookList p {
+  color: var(--var-primary);
+  font-size: 16px;
+}
+
+.bookList h1 {
+  font-size: 24px;
+}
+
+.bookList {
+  display: flex;
+  gap: 20px;
+}
+
+.bookList .bookListChild {
+  flex: 1;
+}
+
+.booksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.book {
+  background-color: white;
+
+  border-radius: 8px;
+  border-left: 12px solid var(--var-primary);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.bookInfo h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.bookInfo h2 span {
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--var-monochrome-3);
+}
+
+.bookMenu {
+  display: flex;
+  gap: 12px;
+}
+
+.btnUnread {
+  color: var(--var-monochrome-0);
+  background-color: transparent;
+  font-size: 22px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btnRead {
+  color: var(--var-monochrome-0);
+  background-color: transparent;
+  font-size: 22px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btnDelete {
+  color: var(--var-danger);
+  background-color: transparent;
+  font-size: 22px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 1500px) {
+  header {
+    padding: 12px 20vh;
+  }
+  main {
+    padding: 60px 20vh;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .bookList {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  header {
+    padding: 12px 2vh;
+  }
+  main {
+    padding: 60px 2vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bookInfo h2 {
+    font-size: 16px;
+  }
+  .bookInfo h2 span {
+    font-size: 12px;
+  }
+  .bookInfo p {
+    font-size: 14px;
+  }
+
+  nav {
+    flex-direction: column-reverse;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalContent {
+  position: fixed;
+  padding: 10px 20px 20px 20px;
+  z-index: 1;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  width: 50vh;
+  overflow: auto;
+  background-color: white;
+  border-top: 12px solid var(--var-primary);
+  border-radius: 8px;
+  animation-name: animateTop;
+  animation-duration: 0.3s;
+  transition: all 0.2s ease-in-out;
+}
+
+.close {
+  color: var(--var-monochrome-1);
+  background-color: var(--var-danger);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.submit {
+  color: var(--var-monochrome-1);
+  background-color: var(--var-primary);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--var-danger-2);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.submit:hover,
+.submit:focus {
+  color: var(--var-primary-2);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes animateTop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.formInput input {
+  border: none;
+  background-color: var(--var-monochrome-1);
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 4px;
+}
+
+.formInput label {
+  font-size: 14px;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: var(--var-monochrome-0);
+}
+
+.formCheck label {
+  font-size: 14px;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: var(--var-monochrome-0);
+}
+
+.formButton {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+#deleteModal .close {
+  background-color: transparent;
+  color: var(--var-monochrome-0);
+}
+
+#deleteModal .close:hover {
+  background-color: var(--var-monochrome-1);
+}
+
+#deleteModal .delete {
+  background-color: var(--var-danger);
+  color: var(--var-monochrome-1);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#deleteModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#deleteModal .modalContent {
+  border-top: 12px solid var(--var-danger);
+}
+
+#deleteModal p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+#deleteModal .modalButton {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
